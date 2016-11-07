@@ -20,6 +20,11 @@ public class CapitalizeString {
     public CapitalizeString() {
     }
 
+    /**
+     *
+     * @param unFormattedString
+     * @return
+     */
     public static String capitalizeStringFirstChar(String unFormattedString){
 
         String[] tempString = unFormattedString.split("\\s");
@@ -27,7 +32,7 @@ public class CapitalizeString {
         for (String str : tempString ) {
 
             if (!excludedString.contains(str)) {
-                 formattedString.append(str.substring(0,1).toUpperCase() + str.substring(1,str.length())).append(" ");
+                 formattedString.append(str.substring(0,1).toUpperCase() + str.substring(1)).append(" ");
             } else {
                 formattedString.append(str).append(" ");
             }
