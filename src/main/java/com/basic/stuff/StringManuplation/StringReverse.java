@@ -1,4 +1,4 @@
-package StringManuplation;
+package com.basic.stuff.StringManuplation;
 
 /**
  * Created by sahilk on 07/11/16.
@@ -27,10 +27,16 @@ public class StringReverse {
             arr[j] = tmp;
 
         }
+
+
         return new String(arr);
     }
 
     public static void main(String[] args) {
-        System.out.println(reverseStringWithPreservingSpaces("s ahilkohl i"));//5 55 554 4443 33221
+        String s1 = "da$#%#^#^#^#^#^#^##^";
+        String str = new String("da$#%#^#^#^#^#^#^##^");
+        System.out.println(""+s1.hashCode() +"$$$$$$"+str.hashCode());
+
+        System.out.println(reverseStringWithPreservingSpaces("s ahilkohli"));//5 55 554 4443 33221
     }
 }

@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Created by sahilk on 06/11/16.
  */
@@ -26,5 +28,32 @@ public class SelectionSort {
             array[position] = temp;
         }
         return array;
+    }
+
+
+    private static int[] testSort(int[] arr){
+        int length = arr.length, position, temp;
+        for (int outerLoop = 0; outerLoop < length -1; outerLoop++) {
+            position = outerLoop;
+
+            for (int innerLoop = outerLoop +1; innerLoop < length; innerLoop++) {
+                if (arr[position] > arr[innerLoop]){
+                    position = innerLoop;
+                }
+            }
+
+            temp = arr[position];
+            arr[position] = arr[outerLoop];
+            arr[outerLoop] = temp;
+        }
+        return  arr;
+    }
+
+    public static void main(String[] args) {
+        int array [] = new int[]{-2,1,5,4,-9,-60};
+        //
+        //-60,1,5,4,-9,-2
+        //-60,-9,5,4,1,-2
+        System.out.println("Array after insertion sort -: "+ Arrays.toString(testSort(array)));
     }
 }

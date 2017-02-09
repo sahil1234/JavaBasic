@@ -33,14 +33,12 @@ public class CapitalizeString {
 
             if (!excludedString.contains(str)) {
                  formattedString.append(str.substring(0,1).toUpperCase() + str.substring(1)).append(" ");
-            } else {
-                formattedString.append(str).append(" ");
             }
         }
         return formattedString.toString().trim();
     }
 
     public static void main(String[] args) {
-        System.out.println(capitalizeStringFirstChar("that contains the text of the String"));
+        System.out.println(capitalizeStringFirstChar("that contains the text of the String from"));
     }
 }
